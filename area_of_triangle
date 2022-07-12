@@ -1,0 +1,10 @@
+# area of traingle
+
+function calculateArea(height, base){
+  let area = (1/2)*height*base;
+  return area;
+}
+
+let area_of_triangle = calculateArea(5,8);
+
+console.log("Area : ", area_of_triangle);    # Area : 20
