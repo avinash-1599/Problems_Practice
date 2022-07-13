@@ -1,0 +1,18 @@
+# fibonacci series
+
+function fibo(count){
+    
+    let first_term = 0, second_term = 1;
+    let third_term=0;
+    console.log(first_term);
+    console.log(second_term);
+    for(let i = 2 ; i<count ; ++i){
+      if(count>0){
+        third_term = first_term+second_term;
+        console.log(third_term)
+        first_term = second_term;
+        second_term = third_term;
+      }
+    }
+}
+fibo(10);
