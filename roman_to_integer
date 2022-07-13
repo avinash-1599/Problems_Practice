@@ -1,0 +1,17 @@
+# roman to integer
+
+var romanToInt = function(input) {
+    let values = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    let res = 0
+    for (let i = 0; i < input.length ; i++) {
+        if(values[input[i + 1]] > values[input[i]]) {
+            res+= values[input[i + 1]] - values[input[i]]
+            i++
+        }else {
+            res+= values[input[i]]
+        }
+    }
+    return res
+};
+
+romanToInt(XVI);    // 16
