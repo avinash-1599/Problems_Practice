@@ -1,0 +1,7 @@
+function secondSmallest(arr){
+    let sortedArr = arr.sort((a,b)=>a-b);     // sort function takes a compare function in javascript for numeric values
+    return sortedArr[1];
+}
+
+let res = secondSmallest([20,6,38,9,17,56]);
+console.log(res);             // 9
