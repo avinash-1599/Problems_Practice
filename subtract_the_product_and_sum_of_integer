@@ -1,0 +1,12 @@
+var subtractProductAndSum = function(n) {
+    let sum=0, prod=1;
+    let n1 = n.toString().split("");
+    for(let i=0;i<n1.length;i++){
+        sum+=Number(n1[i]);
+        prod*=Number(n1[i]);
+    }
+    return prod-sum;
+};
+
+const x = subtractProductAndSum(234);
+console.log("Result: ", x);                 // Result: 15
