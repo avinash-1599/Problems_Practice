@@ -1,0 +1,17 @@
+var mergeAlternately = function(word1, word2) {
+    let result = '';
+    let maxLength = Math.max(word1.length, word2.length);
+    let a,b;
+    for (let i = 0; i < maxLength; i++) {
+        a = word1[i] ?? '';
+        b = word2[i] ?? '';
+        result += a + b;
+    }
+    return result;
+};
+
+let res = mergeAlternately("abc", "pqrst");
+console.log(res);       //     apbqcrst
+
+let res = mergeAlternately("abcde", "pqr");
+console.log(res);       //     apbqcrde
