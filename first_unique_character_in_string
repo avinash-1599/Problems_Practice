@@ -1,0 +1,19 @@
+// Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
+
+// Input: s = "leetcode"
+   Output: 0
+   
+// Input: s = "loveleetcode"
+   Output: 2
+   
+   
+   var firstUniqChar = function(s) {
+    
+    for(let i = 0; i < s.length; i++){
+        let currChar = s[i];
+        if(s.indexOf(currChar) === s.lastIndexOf(currChar)){
+            return i;
+        }
+    }
+    return -1;
+};
